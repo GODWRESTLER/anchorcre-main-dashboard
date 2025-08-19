@@ -33,8 +33,29 @@ const QualificationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    
+    // Submit to GoHighLevel API
+    fetch('YOUR_GOHIGHLEVEL_ENDPOINT', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer YOUR_API_KEY',
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setIsSubmitted(true);
+      })
+      .catch(error => {
+        setIsSubmitted(true);
+        console.error('Submission error:', error);
+      });
+
     // Google Ads Conversion Tracking
     if (typeof gtag !== 'undefined') {
       gtag('event', 'conversion', {
@@ -43,7 +64,7 @@ const QualificationForm = () => {
         'currency': 'USD'
       });
     }
-    
+
     // Analytics Event
     if (typeof gtag !== 'undefined') {
       gtag('event', 'form_submit', {
@@ -52,9 +73,9 @@ const QualificationForm = () => {
         'value': formData.loanAmount
       });
     }
-    
-    // Here you would integrate with your CRM/lead management system
-    console.log('Form submitted:', formData);
+    // Optionally: Remove this if you only want to show thank you on successful API submit
+    // setIsSubmitted(true);
+    // console.log('Form submitted:', formData);
   };
 
   if (isSubmitted) {

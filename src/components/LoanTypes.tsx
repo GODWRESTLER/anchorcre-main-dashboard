@@ -75,7 +75,7 @@ const loanTypes = [
     description: 'Traditional mortgage financing with competitive rates and terms.',
     features: ['Low down payments', 'Fixed & adjustable rates', 'Government programs'],
     color: 'bg-teal-500',
-    link: '#'
+    link: '/conventional-loan'
   },
   {
     icon: Ship,

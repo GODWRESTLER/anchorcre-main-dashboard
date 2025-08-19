@@ -5,6 +5,7 @@ import { Calculator, ArrowRight, CheckCircle, Clock } from 'lucide-react';
 const QualificationForm = () => {
   const [formData, setFormData] = useState({
     loanType: '',
+    loanDetail:'Bridge Loan',
     propertyType: '',
     loanAmount: '',
     timeline: '',
@@ -30,8 +31,33 @@ const QualificationForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    
+
+    // Submit to GoHighLevel API
+    // TODO: Replace 'YOUR_GOHIGHLEVEL_ENDPOINT' and 'YOUR_API_KEY' with your actual values
+    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/4d4c058e-3856-489e-b717-995c21a8befc', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+        
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Optionally handle response data
+        setIsSubmitted(true);
+      })
+      .catch(error => {
+        // Optionally handle error
+        setIsSubmitted(true); // Still show thank you, or handle differently
+        console.error('Submission error:', error);
+      });
+
     // Google Ads Conversion Tracking
     if (typeof gtag !== 'undefined') {
       gtag('event', 'conversion', {
@@ -40,7 +66,7 @@ const QualificationForm = () => {
         'currency': 'USD'
       });
     }
-    
+
     // Analytics Event
     if (typeof gtag !== 'undefined') {
       gtag('event', 'form_submit', {
@@ -49,9 +75,9 @@ const QualificationForm = () => {
         'value': formData.loanAmount
       });
     }
-    
-    // Here you would integrate with your CRM/lead management system
-    console.log('Form submitted:', formData);
+    // Optionally: Remove this if you only want to show thank you on successful API submit
+    // setIsSubmitted(true);
+    // console.log('Form submitted:', formData);
   };
 
   if (isSubmitted) {
