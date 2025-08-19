@@ -34,11 +34,10 @@ const QualificationForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Submit to GoHighLevel API
-    fetch('YOUR_GOHIGHLEVEL_ENDPOINT', {
+    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/4d4c058e-3856-489e-b717-995c21a8befc', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer YOUR_API_KEY',
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(formData),
     })
