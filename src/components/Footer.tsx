@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <MapPin size={16} />
-                <span>Licensed Nationwide</span>
+                <span>Services Nationwide</span>
               </div>
             </div>
 
@@ -132,8 +132,8 @@ const Footer = () => {
 
           <div className="mt-6 text-xs text-slate-500 text-center">
             <p className="mb-2">
-              <strong>Important:</strong> Anchor Commercial Capital is a licensed mortgage broker. 
-              We connect borrowers with qualified lenders and may earn origination fees upon successful closing.
+              <strong>Important:</strong> Anchor Commercial Capital is a commercial financing broker. 
+              We connect borrowers with qualified lenders and earn origination fees upon successful closing.
             </p>
           </div>
         </div>
