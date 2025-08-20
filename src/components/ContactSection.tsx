@@ -20,8 +20,47 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    console.log('Contact form submitted:', formData);
+    // Submit to GoHighLevel API
+    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/7417f072-7ebb-4998-887e-050339bb7c3a', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setIsSubmitted(true);
+      })
+      .catch(error => {
+        setIsSubmitted(true); // Optionally show error UI
+        console.error('Submission error:', error);
+      });
+
+    // Google Ads Conversion Tracking
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+        'value': 1.0,
+        'currency': 'USD'
+      });
+    }
+
+    // Analytics Event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'form_submit', {
+        'event_category': 'Lead Generation',
+        'event_label': 'Qualification Form',
+        'value': formData.loanAmount
+      });
+    }
+console.log("Form submitted")
+
   };
 
   if (isSubmitted) {
