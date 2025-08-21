@@ -80,6 +80,9 @@ const WhyChooseUs = () => {
               <h3 className="text-xl font-bold text-slate-900 mb-4">
                 {advantage.title}
               </h3>
+              <p className="text-slate-600">
+                {advantage.description}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -110,6 +113,9 @@ const WhyChooseUs = () => {
               <div className="text-slate-600">Average Response Time</div>
             </div>
             <div className="text-center">
+              <div className="text-4xl font-bold text-purple-500 mb-2">$2B+</div>
+              <div className="text-slate-600">Loans Funded</div>
+            </div>
           </div>
         </motion.div>
       </div>
