@@ -149,7 +149,7 @@ console.log("Form submitted")
                 {
                   icon: MapPin,
                   title: 'Nationwide Service',
-                  info: 'Licensed in All 50 States',
+                  info: 'All 50 States',
                   description: 'Local expertise, national reach'
                 },
                 {
@@ -208,7 +208,7 @@ console.log("Form submitted")
                 </li>
                 <li className="flex items-center space-x-2">
                   <div className="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
-                  <span>Licensed nationwide lending</span>
+                  <span>Nationwide lending services</span>
                 </li>
               </ul>
             </motion.div>
