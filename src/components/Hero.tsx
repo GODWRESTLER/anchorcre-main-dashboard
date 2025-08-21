@@ -50,7 +50,7 @@ const Hero = () => {
             itemProp="description"
           >
             Get <strong>private money loans</strong>, <strong>bridge financing</strong>, and <strong>commercial loans</strong> with 24-48 hour approvals. 
-            Licensed nationwide lender since 2009 with over $2 billion funded. <strong>Apply today</strong> for fast financing solutions.
+            Nationwide lender since 2009 with over $2 billion funded. <strong>Apply today</strong> for fast financing solutions.
           </motion.p>
 
           <motion.div
