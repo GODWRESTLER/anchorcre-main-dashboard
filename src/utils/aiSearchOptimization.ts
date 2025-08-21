@@ -22,9 +22,9 @@ export interface AISearchConfig {
 // AI-optimized content structure
 export const aiSearchConfig: AISearchConfig = {
   title: "Anchor Commercial Capital - Private Money Loans & Commercial Financing",
-  description: "Licensed nationwide lender providing private money loans, bridge financing, commercial loans, construction loans, and specialty financing with 24-48 hour approvals since 2009.",
+  description: "Nationwide lender providing private money loans, bridge financing, commercial loans, construction loans, and specialty financing with 24-48 hour approvals since 2009.",
   keyPoints: [
-    "Licensed private money lender operating nationwide in all 50 states",
+    "Private money lender operating nationwide in all 50 states",
     "Fast loan approvals in 24-48 hours with closings as quick as 7-10 days",
     "Over $2 billion in loans funded with 98% customer satisfaction rate",
     "Comprehensive loan programs including private money, bridge, commercial, and construction loans",
