@@ -51,7 +51,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3 text-slate-400">
                 <MapPin size={16} />
-                <span>Services Nationwide</span>
+                Services Nationwide
               </div>
             </div>
 
