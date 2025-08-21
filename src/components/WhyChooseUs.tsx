@@ -79,7 +79,7 @@ const WhyChooseUs = () => {
               
               <h3 className="text-xl font-bold text-slate-900 mb-4">
                 {advantage.title}
-              </p>
+              </h3>
             </motion.div>
           ))}
         </div>
