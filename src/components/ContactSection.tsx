@@ -9,7 +9,8 @@ const ContactSection = () => {
     phone: '',
     loanType: '',
     loanAmount: '',
-    message: ''
+    message: '',
+    smsOptIn: false
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -316,6 +317,20 @@ console.log("Form submitted")
                 />
               </div>
 
+              <div className="flex items-start space-x-3 p-4 bg-slate-50 rounded-xl">
+                <input
+                  type="checkbox"
+                  id="smsOptInContact"
+                  checked={formData.smsOptIn}
+                  onChange={(e) => setFormData(prev => ({ ...prev, smsOptIn: e.target.checked }))}
+                  className="mt-1 w-5 h-5 text-blue-500 border-2 border-slate-300 rounded focus:ring-blue-500 flex-shrink-0"
+                />
+                <label htmlFor="smsOptInContact" className="text-slate-700 text-sm leading-relaxed cursor-pointer">
+                  I consent to receive SMS messages and robo calls from Anchor Commercial Capital 
+                  regarding my financing inquiry. Message and data rates may apply. Reply STOP to opt out.
+                </label>
+              </div>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -327,8 +342,13 @@ console.log("Form submitted")
               </motion.button>
 
               <div className="text-xs text-slate-500 text-center">
-                By submitting this form, you consent to receive calls and emails from 
-                Anchor Commercial Capital regarding your financing inquiry.
+                <p className="mb-2">
+                  <strong>TCPA Compliance Notice:</strong> By providing your contact information and clicking "Get My Free Consultation," 
+                  you consent to receive calls and emails from Anchor Commercial Capital regarding your financing inquiry.
+                </p>
+                <p>
+                  You can opt out at any time by unsubscribing from emails. SMS consent is optional and controlled by the checkbox above.
+                </p>
               </div>
             </form>
           </motion.div>
