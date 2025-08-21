@@ -143,13 +143,13 @@ const BingOptimization = () => {
                 <Award className="text-purple-500" size={32} />
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-2">
-                Licensed Nationwide
+                Nationwide Service
               </h4>
               <p className="text-lg font-semibold text-slate-700 mb-2">
                 All 50 States
               </p>
               <p className="text-slate-600">
-                Fully licensed and compliant
+                Fully compliant nationwide
               </p>
             </div>
           </div>

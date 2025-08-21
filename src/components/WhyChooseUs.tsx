@@ -79,10 +79,6 @@ const WhyChooseUs = () => {
               
               <h3 className="text-xl font-bold text-slate-900 mb-4">
                 {advantage.title}
-              </h3>
-              
-              <p className="text-slate-600 leading-relaxed">
-                {advantage.description}
               </p>
             </motion.div>
           ))}

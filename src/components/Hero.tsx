@@ -122,7 +122,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="text-center mt-6 text-slate-300">
-              Licensed nationwide lending professionals ready to help
+              Nationwide lending professionals ready to help
             </div>
           </motion.div>
         </div>
