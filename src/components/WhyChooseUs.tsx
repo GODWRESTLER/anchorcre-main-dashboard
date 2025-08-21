@@ -110,9 +110,6 @@ const WhyChooseUs = () => {
               <div className="text-slate-600">Average Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-purple-500 mb-2">5000+</div>
-              <div className="text-slate-600">Successful Closings</div>
-            </div>
           </div>
         </motion.div>
       </div>
