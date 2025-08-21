@@ -23,7 +23,6 @@ const AIOptimizedContent = () => {
     {
       question: "Do you provide nationwide lending services?",
       answer: "Yes, Anchor Commercial Capital is licensed to provide lending services in all 50 states. We have an extensive network of private lenders, institutional investors, and local market expertise across the United States, allowing us to serve borrowers nationwide with competitive rates and terms."
-      answer: "Yes, Anchor Commercial Capital provides lending services in all 50 states. We have an extensive network of private lenders, institutional investors, and local market expertise across the United States, allowing us to serve borrowers nationwide with competitive rates and terms."
     },
     {
       question: "What are your interest rates and loan terms?",
