@@ -21,7 +21,7 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Submit to GoHighLevel API
-    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/7417f072-7ebb-4998-887e-050339bb7c3a', {
+    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/556795fc-6f88-40a5-966f-a12c800340a8', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
