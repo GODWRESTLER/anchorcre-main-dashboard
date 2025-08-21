@@ -14,13 +14,7 @@ import {
 
 const loanTypes = [
   {
-    icon: DollarSign,
-    title: 'Private Money Loans',
-    description: 'Fast, flexible private lending solutions for real estate investors and business owners.',
-    features: ['Quick approval process', 'Flexible terms', 'Asset-based lending'],
-    color: 'bg-blue-500',
-    link: '#'
-  },
+
   {
     icon: Building2,
     title: 'Bridge Loan Financing',
@@ -69,14 +63,7 @@ const loanTypes = [
     color: 'bg-indigo-500',
     link: '/hard-money'
   },
-  {
-    icon: Home,
-    title: 'Conventional Loans',
-    description: 'Traditional mortgage financing with competitive rates and terms.',
-    features: ['Low down payments', 'Fixed & adjustable rates', 'Government programs'],
-    color: 'bg-teal-500',
-    link: '/conventional-loan'
-  },
+
   {
     icon: Ship,
     title: 'Yacht Financing',
