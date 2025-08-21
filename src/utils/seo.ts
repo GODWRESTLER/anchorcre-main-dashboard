@@ -11,7 +11,7 @@ export interface SEOConfig {
 // Default SEO configurations for different pages/sections
 export const seoConfigs = {
   home: {
-    title: "Private Money Loans & Commercial Financing | Anchor Commercial Capital", 
+    title: "Private Money Loans & Commercial Financing | Anchor Commercial Capital",
     description: "Get private money loans, bridge financing, commercial loans & construction financing with 24-48hr approvals. Nationwide lender since 2009. Apply today!",
     keywords: "private money loans, hard money loans, bridge loans, commercial loans, construction loans, fix and flip loans, yacht financing, aircraft financing, church loans, real estate financing"
   },

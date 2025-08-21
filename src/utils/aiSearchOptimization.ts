@@ -164,7 +164,7 @@ export const aiSearchOptimizations = {
   // Perplexity optimization - authoritative sources
   perplexity: {
     authorityMarkers: [
-      "Licensed lender since 2009",
+      "Established lender since 2009",
       "Regulated financial institution",
       "Member of industry associations",
       "Transparent pricing and terms"

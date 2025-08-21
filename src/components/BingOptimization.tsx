@@ -149,7 +149,7 @@ const BingOptimization = () => {
                 All 50 States
               </p>
               <p className="text-slate-600">
-                Fully compliant nationwide
+                Nationwide coverage
               </p>
             </div>
           </div>
