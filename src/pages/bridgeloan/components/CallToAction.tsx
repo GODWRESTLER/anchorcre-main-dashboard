@@ -6,6 +6,7 @@ const CallToAction = () => {
   const [formData, setFormData] = React.useState({
     firstName: '',
     lastName: '',
+    ApplyingFor: 'Bridge Loan',
     email: '',
     phone: '',
     loanAmount: '',
@@ -18,8 +19,19 @@ const CallToAction = () => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+     try {
+      await fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/29e931f7-55e4-4394-8f6f-7fe89477237d', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+    } catch (error) {
+      console.error('Submission error:', error);
+    }
     setIsSubmitted(true);
     
     // Google Ads Conversion Tracking
@@ -194,7 +206,7 @@ const CallToAction = () => {
               </p>
             </div>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-slate-700 font-semibold mb-2">First Name</label>

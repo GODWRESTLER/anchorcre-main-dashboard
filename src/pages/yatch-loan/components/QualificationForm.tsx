@@ -9,6 +9,7 @@ const QualificationForm = () => {
     loanAmount: '',
     timeline: '',
     creditScore: '',
+    loanDetail: 'Yacht Loan',
     name: '',
     email: '',
     phone: '',
@@ -28,7 +29,7 @@ const QualificationForm = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit =  async (e: React.FormEvent) => {
     e.preventDefault();
     // Submit to GoHighLevel API
     fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/4d4c058e-3856-489e-b717-995c21a8befc', {
@@ -187,7 +188,7 @@ const QualificationForm = () => {
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">Yacht Financing Details</h3>
                 
                 <div>
-                  <label className="block text-slate-700 font-semibold mb-3">Financing Type</label>
+                  <label className="block text-slate-700 font-semibold mb-3">Loan Type</label>
                   <div className="grid grid-cols-1 gap-3">
                     {['New Yacht Purchase', 'Pre-Owned Yacht', 'Yacht Refinancing', 'Yacht Construction'].map((type) => (
                       <button

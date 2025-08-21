@@ -32,7 +32,7 @@ const QualificationForm = () => {
     e.preventDefault();
 
     // Submit to GoHighLevel API
-    fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/4d4c058e-3856-489e-b717-995c21a8befc', {
+    fetch('api', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

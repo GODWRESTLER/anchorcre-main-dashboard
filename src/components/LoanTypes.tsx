@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const loanTypes = [
-  {
+  
 
   {
     icon: Building2,
