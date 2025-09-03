@@ -128,13 +128,13 @@ const ContactSection = () => {
           <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight" itemProp="name">
             <span className="block">Ready to Get</span>
             <span className="block bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
-              Pre-Approved?
+              Term Sheets?
             </span>
           </h2>
           
           <p className="text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed font-medium" itemProp="description">
-            Submit your loan request and get matched with qualified lenders in 24 hours. 
-            Our AI-powered platform finds the best rates and terms for your specific needs.
+            Submit your loan request and get competitive term sheets from qualified lenders in 24 hours. 
+            Our AI-powered platform delivers multiple offers so you can choose the best terms.
           </p>
         </motion.div>
 
