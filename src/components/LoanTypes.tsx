@@ -23,7 +23,7 @@ const loanTypes = [
     color: 'from-green-500 to-emerald-600',
     iconBg: 'bg-green-500',
     link: '/bridge-loan',
-    urgency: 'Closes in 2-3 weeks'
+    urgency: 'Term sheets in 24hrs'
   },
   {
     icon: TrendingUp,
@@ -98,6 +98,13 @@ const loanTypes = [
 ];
 
 const LoanTypes = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="loan-types" className="py-32 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden" itemScope itemType="https://schema.org/Service">
       {/* Background Pattern */}
@@ -180,7 +187,7 @@ const LoanTypes = () => {
                 onClick={() => window.open(loan.link, '_blank')}
                 className="w-full bg-gradient-to-r from-slate-800 to-slate-900 text-white py-4 rounded-xl font-bold hover:from-slate-900 hover:to-black transition-all flex items-center justify-center space-x-2 group relative z-10"
               >
-                <span>Get Quote Now</span>
+                <span>Get Term Sheets</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>
@@ -199,11 +206,11 @@ const LoanTypes = () => {
             
             <div className="relative z-10">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                Need a Custom Financing Solution?
+                Need Custom Term Sheets for Complex Deals?
               </h3>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Our AI-powered platform can structure creative financing solutions for unique situations. 
-                Get matched with specialized lenders in 24 hours.
+                Get matched with specialized lenders and receive term sheets in 24 hours.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -213,13 +220,13 @@ const LoanTypes = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-colors flex items-center space-x-2 shadow-xl"
                 >
-                  <span>Get Custom Solution</span>
+                  <span>Get Custom Term Sheets</span>
                   <ArrowRight size={20} />
                 </motion.button>
                 
                 <div className="flex items-center space-x-2 text-blue-200">
                   <Clock size={16} />
-                  <span className="text-sm font-medium">Response in 24 hours guaranteed</span>
+                  <span className="text-sm font-medium">Term sheets delivered in 24 hours guaranteed</span>
                 </div>
               </div>
             </div>
