@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HelpCircle, CheckCircle, Info, Zap, TrendingUp, Shield } from 'lucide-react';
+import { HelpCircle, CheckCircle, Info, Zap, TrendingUp, Shield, ArrowRight } from 'lucide-react';
 
 const AIOptimizedContent = () => {
   const faqs = [
@@ -131,8 +131,8 @@ const AIOptimizedContent = () => {
                   <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold">
                     <CheckCircle size={16} />
                     <span>{point.stats}</span>
-                <div className="text-3xl font-bold text-green-600 mb-2">24 Hours</div>
-                <div className="text-green-700 font-semibold">Term Sheet Delivery</div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
