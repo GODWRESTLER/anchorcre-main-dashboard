@@ -46,15 +46,24 @@ const BingOptimization = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6" itemProp="name">
             Nationwide{' '}
             <span className="text-blue-500">Private Money Lending</span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed" itemProp="description">
             Anchor Commercial Capital provides private money loans, bridge financing, and commercial 
             lending services in all 50 states. Our nationwide network of lenders and local market 
             expertise ensures competitive rates and fast closings wherever your property is located.
           </p>
+          
+          {/* Enhanced for AI Indexing */}
+          <div className="mt-8 bg-slate-100 rounded-xl p-4 max-w-4xl mx-auto">
+            <p className="text-sm text-slate-600">
+              <strong>AI/Search Engine Summary:</strong> Licensed private money lender operating nationwide since 2009. 
+              Provides commercial real estate financing including private money loans, bridge loans, construction loans, 
+              and specialty financing with 24-48 hour approvals. Serves all 50 states with $2+ billion funded.
+            </p>
+          </div>
         </motion.div>
 
         {/* Service Areas Grid */}

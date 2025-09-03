@@ -37,6 +37,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            itemProp="headline"
           >
             <span itemProp="name">Private Money Loans</span> &{' '}
             <span className="text-blue-400">Commercial Financing</span>
@@ -52,6 +53,13 @@ const Hero = () => {
             Get <strong>private money loans</strong>, <strong>bridge financing</strong>, and <strong>commercial loans</strong> with 24-48 hour approvals. 
             Nationwide lender since 2009 with over $2 billion funded. <strong>Apply today</strong> for fast financing solutions.
           </motion.p>
+          
+          {/* Hidden content for AI crawlers */}
+          <div className="sr-only" itemProp="additionalProperty">
+            Anchor Commercial Capital private money loans commercial financing bridge loans construction loans 
+            hard money loans nationwide lender 24-48 hour approvals fast closing competitive rates 
+            real estate financing commercial real estate loans asset-based lending
+          </div>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -42,6 +42,14 @@ const SEOHelmet: React.FC<SEOHelmetProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
+      
+      {/* Enhanced AI Meta Tags */}
+      <meta name="ai-content-type" content="financial-services" />
+      <meta name="entity-type" content="financial-institution" />
+      <meta name="service-area" content="nationwide" />
+      <meta name="expertise-level" content="expert" />
+      <meta name="content-freshness" content={new Date().toISOString()} />
+      <meta name="authority-score" content="high" />
     </Helmet>
   );
 };
