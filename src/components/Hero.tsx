@@ -36,37 +36,38 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            className="text-5xl md:text-7xl font-black text-white mb-8 leading-tight tracking-tight"
           >
-            <span itemProp="name">Private Money Loans</span> &{' '}
-            <span className="text-blue-400">Commercial Financing</span>
+            Get Funded in{' '}
+            <span className="text-blue-400 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">24 Hours</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-slate-300 mb-8 leading-relaxed max-w-4xl mx-auto"
+            className="text-2xl text-slate-200 mb-12 leading-relaxed max-w-5xl mx-auto font-medium"
             itemProp="description"
           >
-            Get <strong>private money loans</strong>, <strong>bridge financing</strong>, and <strong>commercial loans</strong> with 24-48 hour approvals. 
-            Nationwide lender since 2009 with over $2 billion funded. <strong>Apply today</strong> for fast financing solutions.
+            <span className="text-white font-semibold">$100K to $100M+</span> commercial real estate loans with{' '}
+            <span className="text-blue-300 font-semibold">lightning-fast approvals</span>. Our AI-powered matching connects you with{' '}
+            <span className="text-white font-semibold">200+ specialized lenders</span> in 24 hours. No banks. No delays. Just results.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-6 mb-12"
+            className="flex flex-wrap items-center justify-center gap-8 mb-16"
           >
             {[
-              'Fast Approvals in 24-48 Hours',
-              'Competitive Rates & Terms', 
-              'Nationwide Lending Network'
+              '⚡ 24-Hour Approvals',
+              '🎯 AI-Powered Matching', 
+              '💰 $2B+ Funded',
+              '🏆 98% Success Rate'
             ].map((feature, index) => (
-              <div key={index} className="flex items-center space-x-2 text-slate-300">
-                <CheckCircle className="text-blue-400" size={18} />
-                <span className="text-sm">{feature}</span>
+              <div key={index} className="flex items-center space-x-3 text-slate-200 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                <span className="text-lg font-semibold">{feature}</span>
               </div>
             ))}
           </motion.div>
@@ -76,15 +77,15 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
           >
             <motion.button
               onClick={scrollToContact}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 transition-colors flex items-center space-x-2 text-lg shadow-xl"
+              className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-12 py-5 rounded-2xl font-bold hover:from-blue-600 hover:to-blue-700 transition-all flex items-center space-x-3 text-xl shadow-2xl hover:shadow-blue-500/25 border border-blue-400/30"
             >
-              <span>Get Pre-Approved Today</span>
+              <span>Get Funded Now</span>
               <ArrowRight size={20} />
             </motion.button>
             
@@ -92,9 +93,9 @@ const Hero = () => {
               onClick={scrollToLoans}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-colors shadow-xl bg-white/5"
+              className="border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold hover:bg-white/20 transition-all shadow-xl bg-white/10 backdrop-blur-sm text-xl"
             >
-              View Loan Programs
+              See Loan Options
             </motion.button>
           </motion.div>
 
