@@ -1,229 +1,226 @@
-import { motion } from 'framer-motion';
-import { 
-  Building2, 
-  Home, 
-  Hammer, 
-  Plane, 
-  Ship, 
-  Church, 
-  DollarSign, 
-  TrendingUp,
-  Construction,
-  Banknote
-} from 'lucide-react';
-
-const loanTypes = [
-  
-
-  {
-    icon: Building2,
-    title: 'Bridge Loan Financing',
-    description: 'Short-term financing to bridge the gap between purchase and permanent financing.',
-    features: ['7-30 day closings', 'Up to 80% LTV', 'Interest-only payments'],
-    color: 'bg-green-500',
-    link: '/bridge-loan'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Commercial Loans',
-    description: 'Comprehensive commercial real estate financing for all property types.',
-    features: ['Competitive rates', 'Long-term financing', 'Nationwide coverage'],
-    color: 'bg-purple-500',
-    link: '/commercial'
-  },
-  {
-    icon: Hammer,
-    title: 'Fix & Flip Construction',
-    description: 'Specialized financing for residential fix and flip projects.',
-    features: ['Draw-based funding', 'Fast approvals', 'Experienced contractors'],
-    color: 'bg-orange-500',
-    link: '/fix-flip-loans'
-  },
-  {
-    icon: Church,
-    title: 'Church Loans & Financing',
-    description: 'Specialized financing solutions for religious organizations and churches.',
-    features: ['Ministry-focused', 'Flexible repayment', 'Competitive church rates'],
-    color: 'bg-amber-500',
-    link: '/church-loan'
-  },
-  {
-    icon: Construction,
-    title: 'Ground Up Construction',
-    description: 'New construction financing for residential and commercial projects.',
-    features: ['Construction-to-perm', 'Progress inspections', 'Competitive rates'],
-    color: 'bg-red-500',
-    link: '/ground-up-construction'
-  },
-  {
-    icon: Banknote,
-    title: 'Hard Money Loans',
-    description: 'Asset-based lending with quick closings for time-sensitive deals.',
-    features: ['7-10 day closings', 'No income verification', 'Up to 70% LTV'],
-    color: 'bg-indigo-500',
-    link: '/hard-money'
-  },
-
-  {
-    icon: Ship,
-    title: 'Yacht Financing',
-    description: 'Specialized marine financing for luxury yachts and boats.',
-    features: ['Up to $50M financing', 'Competitive marine rates', 'Flexible terms'],
-    color: 'bg-cyan-500',
-    link: '/yatch-loan'
-  },
-  {
-    icon: Plane,
-    title: 'Aircraft Financing',
-    description: 'Aviation financing for private and commercial aircraft purchases.',
-    features: ['New & used aircraft', 'Competitive aviation rates', 'Quick approvals'],
-    color: 'bg-sky-500',
-    link: '/aircraft-financing'
-  }
-];
-
-const LoanTypes = () => {
-  return (
-    <section id="loan-types" className="py-24 bg-white" itemScope itemType="https://schema.org/Service">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight" itemProp="name">
-            Choose Your{' '}
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Funding Path</span>
-          </h2>
-          <p className="text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed" itemProp="description">
-            <span className="text-slate-900 font-semibold">200+ specialized lenders</span> compete for your deal.{' '}
-            <span className="text-blue-600 font-semibold">AI-powered matching</span> finds your perfect fit in minutes, not months.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {loanTypes.map((loan, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:border-blue-300 hover:-translate-y-2 relative overflow-hidden"
-              itemScope itemType="https://schema.org/FinancialProduct"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/30 transition-all duration-500 rounded-3xl" />
-              
-              <div className="relative z-10">
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 8 }}
-                className={`inline-flex items-center justify-center w-20 h-20 ${loan.color} rounded-3xl mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300`}
-              >
-                <loan.icon className="text-white" size={36} />
-              </motion.div>
-              
-              <h3 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-blue-700 transition-colors" itemProp="name">
-                {loan.title}
-              </h3>
-              
-              <p className="text-slate-600 mb-8 leading-relaxed text-lg" itemProp="description">
-                {loan.description}
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {loan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-3 text-slate-700">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"></div>
-                    <span className="font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.open(loan.link, '_blank')}
-            "category": "Commercial Financing"
-          },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "5.99",
-            "priceCurrency": "USD",
-            "unitText": "percent annual rate"
-          }
-        }
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Money Loans & Commercial Financing | Anchor Commercial Capital</title>
+    <meta name="description" content="Get private money loans, bridge financing, commercial loans & construction financing with 24-48hr approvals. Licensed nationwide lender since 2009. Apply today!" />
+    <meta name="description" content="Get private money loans, bridge financing, commercial loans & construction financing with 24-48hr approvals. Nationwide lender since 2009. Apply today!" />
+    <meta name="keywords" content="private money loans, hard money loans, bridge loans, commercial loans, construction loans, fix and flip loans, yacht financing, aircraft financing, church loans, real estate financing" />
+    
+    <!-- Enhanced Open Graph -->
+    <meta property="og:title" content="Private Money Loans & Commercial Financing | Anchor Commercial Capital" />
+    <meta property="og:description" content="Get private money loans, bridge financing, commercial loans & construction financing with 24-48hr approvals. Licensed nationwide lender since 2009." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anchorcreloans.com/main" />
+    <meta property="og:image" content="https://anchorcommercialcapital.com/og-image.jpg" />
+    <meta property="og:site_name" content="Anchor Commercial Capital" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Private Money Loans & Commercial Financing | Anchor Commercial Capital" />
+    <meta name="twitter:description" content="Get private money loans, bridge financing, commercial loans & construction financing with 24-48hr approvals. Licensed nationwide lender since 2009." />
+    <meta name="twitter:image" content="https://anchorcommercialcapital.com/og-image.jpg" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Anchor Commercial Capital" />
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+    <meta name="language" content="en-US" />
+    
+    <link rel="canonical" href="https://anchorcreloans.com/main" />
+    
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Anchor Commercial Capital",
+      "description": "Private money loans, commercial financing, and construction loans with fast approvals nationwide",
+      "url": "https://anchorcommercialcapital.com",
+      "logo": "https://anchorcommercialcapital.com/logo.png",
+      "telephone": "+1-555-123-5626",
+      "email": "loans@anchorcreloans.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "areaServed": "US",
+      "serviceType": [
+        "Private Money Loans",
+        "Bridge Loan Financing",
+        "Commercial Loans", 
+        "Construction Loans",
+        "Hard Money Loans",
+        "Yacht Financing",
+        "Aircraft Financing"
       ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "ratingCount": "2847"
+      "foundingDate": "2009",
+      "sameAs": [
+        "https://linkedin.com/company/anchor-commercial-capital",
+        "https://x.com/anchorcommercial"
+      ]
+    }
+    </script>
+    
+    <!-- Structured Data - Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Anchor Commercial Capital",
+      "image": "https://anchorcommercialcapital.com/logo.png",
+      "telephone": "+1-555-123-5626",
+      "email": "loans@anchorcreloans.com",
+      "url": "https://anchorcommercialcapital.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "40.7128",
+        "longitude": "-74.0060"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday", 
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PTBM7FJL1C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PTBM7FJL1C');
+    </script>
+    
+    <!-- Google Ads Conversion Tracking -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+          'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    
+    <!-- Bing Webmaster Tools -->
+    <meta name="msvalidate.01" content="BING_VERIFICATION_CODE" />
+    
+    <!-- CallRail Phone Number Tracking -->
+    <script type="text/javascript" src="//cdn.callrail.com/companies/655309314/1b51cd7ce69298ffdfa6/12/swap.js"></script>
+    
+    <!-- Rb2b Tracking -->
+    <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("QO92DH7XDYN7");</script>
+    
+    <!-- AI Search Optimization -->
+    <meta name="ai-content-classification" content="financial-services" />
+    <meta name="content-language" content="en-US" />
+    <meta name="subject" content="Commercial and Private Money Lending Services" />
+    <meta name="abstract" content="Anchor Commercial Capital provides comprehensive lending solutions including private money loans, bridge financing, commercial loans, and specialty financing with fast approvals nationwide." />
+    
+    <!-- Enhanced Structured Data for AI -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Anchor Commercial Capital",
+      "url": "https://anchorcommercialcapital.com",
+      "description": "Private money loans, commercial financing, and construction loans with fast approvals nationwide",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://anchorcommercialcapital.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "mainEntity": {
+        "@type": "FinancialService",
+        "name": "Anchor Commercial Capital",
+        "serviceType": [
+          "Private Money Loans",
+          "Bridge Loan Financing",
+          "Commercial Loans",
+          "Construction Loans",
+          "Hard Money Loans",
+          "Yacht Financing",
+          "Aircraft Financing",
+          "Church Loans"
+        ]
       }
     }
     </script>
     
-    <!-- BreadcrumbList Schema -->
+    <!-- FAQ Structured Data for AI -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://anchorcreloans.com"
+          "@type": "Question",
+          "name": "What are private money loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Private money loans are asset-based financing solutions provided by private investors or companies, offering faster approval and closing times compared to traditional bank loans. They're ideal for real estate investors and business owners who need quick access to capital."
+          }
         },
         {
-          "@type": "ListItem", 
-          "position": 2,
-          "name": "Commercial Loans",
-          "item": "https://anchorcreloans.com/commercial"
+          "@type": "Question",
+          "name": "How fast can I get approved for a loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anchor Commercial Capital provides loan approvals in 24-48 hours for most loan types, with some hard money loans closing in as little as 7-10 days. Our streamlined process eliminates lengthy bank underwriting delays."
+          }
         },
         {
-          "@type": "ListItem",
-          "position": 3, 
-          "name": "Bridge Loans",
-          "item": "https://anchorcreloans.com/bridge-loan"
+          "@type": "Question",
+          "name": "What types of properties do you finance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We finance all commercial property types including multifamily, office buildings, retail, industrial, mixed-use, and specialty properties. We also provide residential investment property financing and construction loans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you lend nationwide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Anchor Commercial Capital is licensed to provide lending services in all 50 states. We have a nationwide network of lenders and local market expertise across the United States."
+          }
         }
       ]
     }
     </script>
-                className="mt-6 w-full bg-slate-100 text-slate-700 py-3 rounded-xl font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors"
-              >
-                Learn More
-              </motion.button>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Need a Custom Financing Solution?
-            </h3>
-            <p className="text-slate-600 mb-6">
-              Our experienced lending team can structure creative financing solutions 
-              for unique situations and specialized asset types.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
-            >
-              Speak with a Lending Specialist
-            </motion.button>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default LoanTypes;
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="/js/dom-ready.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
