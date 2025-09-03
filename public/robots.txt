@@ -1,18 +1,46 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Sitemaps
+# Primary Sitemap
 Sitemap: https://anchorcommercialcapital.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
+# Additional Sitemaps for AI Crawlers
+Sitemap: https://anchorcommercialcapital.com/sitemap-pages.xml
+Sitemap: https://anchorcommercialcapital.com/sitemap-loans.xml
+
+# Specific AI Bot Instructions
+User-agent: GPTBot
+Allow: /
 Crawl-delay: 1
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: YouBot
+Allow: /
 
 # Block access to admin areas (if any in future)
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.json$
-Disallow: /*.xml$
+Disallow: /api/
+Disallow: /webhook/
+Disallow: /_next/
+Disallow: /node_modules/
 
 # Allow important files
 Allow: /sitemap.xml
-Allow: /robots.txt
