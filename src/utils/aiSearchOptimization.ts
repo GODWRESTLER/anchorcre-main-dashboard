@@ -40,7 +40,7 @@ export const aiSearchConfig: AISearchConfig = {
     },
     {
       question: "How fast can I get approved for a loan?",
-      answer: "Anchor Commercial Capital provides loan approvals in 24-48 hours for most loan types. Hard money loans can close in 7-10 days, bridge loans in 7-30 days, and commercial loans typically close within 30-45 days."
+      answer: "Anchor Commercial Capital delivers competitive term sheets in 24 hours for most loan types. Hard money loans can close in 7-10 days, bridge loans in 7-30 days, and commercial loans typically close within 30-45 days."
     },
     {
       question: "What types of properties do you finance?",
