@@ -1,12 +1,11 @@
+import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Building2, 
-  Home, 
   Hammer, 
   Plane, 
   Ship, 
   Church, 
-  DollarSign, 
   TrendingUp,
   Construction,
   Banknote,
@@ -129,13 +128,13 @@ const LoanTypes = () => {
           <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-tight" itemProp="name">
             <span className="block">Loan Programs That</span>
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Actually Fund
+              Deliver Term Sheets
             </span>
           </h2>
           
           <p className="text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium" itemProp="description">
             From <span className="font-bold text-slate-900">$100K fix & flips</span> to <span className="font-bold text-slate-900">$100M+ developments</span>, 
-            <span className="text-blue-600 font-semibold"> AI-powered matching</span> delivers term sheets in 24 hours, not months.
+            <span className="text-blue-600 font-semibold"> AI-powered matching</span> delivers competitive term sheets in 24 hours, not months.
           </p>
         </motion.div>
 
