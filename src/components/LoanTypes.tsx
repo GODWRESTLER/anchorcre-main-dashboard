@@ -135,7 +135,7 @@ const LoanTypes = () => {
           
           <p className="text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium" itemProp="description">
             From <span className="font-bold text-slate-900">$100K fix & flips</span> to <span className="font-bold text-slate-900">$100M+ developments</span>, 
-            <span className="text-blue-600 font-semibold">AI-powered matching</span> delivers term sheets in 24 hours, not months.
+            <span className="text-blue-600 font-semibold"> AI-powered matching</span> delivers term sheets in 24 hours, not months.
           </p>
         </motion.div>
 
