@@ -1,159 +1,96 @@
-import { motion } from 'framer-motion';
-import { 
-  Building2, 
-  Home, 
-  Hammer, 
-  Plane, 
-  Ship, 
-  Church, 
-  DollarSign, 
-  TrendingUp,
-  Construction,
-  Banknote
-} from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Commercial Loans - Term Sheets in 24 Hours | Anchor Commercial Capital</title>
+    <meta name="title" content="Commercial Loans - Term Sheets in 24 Hours | Anchor Commercial Capital" />
+    <meta name="description" content="Get competitive term sheets for commercial loans, bridge financing & construction loans in 24 hours. AI-powered lender matching. $100K-$100M+ nationwide. Apply today!" />
+    <meta name="keywords" content="commercial loans, term sheets, bridge loans, construction loans, hard money loans, private money loans, real estate financing, commercial financing" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anchorcreloans.com/" />
+    <meta property="og:title" content="Commercial Loans - Term Sheets in 24 Hours | Anchor Commercial Capital" />
+    <meta property="og:description" content="Get competitive term sheets for commercial loans, bridge financing & construction loans in 24 hours. AI-powered lender matching. $100K-$100M+ nationwide. Apply today!" />
+    <meta property="og:image" content="https://anchorcreloans.com/og-image.jpg" />
 
-const loanTypes = [
-  
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://anchorcreloans.com/" />
+    <meta property="twitter:title" content="Commercial Loans - Term Sheets in 24 Hours | Anchor Commercial Capital" />
+    <meta property="twitter:description" content="Get competitive term sheets for commercial loans, bridge financing & construction loans in 24 hours. AI-powered lender matching. $100K-$100M+ nationwide. Apply today!" />
+    <meta property="twitter:image" content="https://anchorcreloans.com/og-image.jpg" />
 
-  {
-    icon: Building2,
-    title: 'Bridge Loan Financing',
-    description: 'Short-term financing to bridge the gap between purchase and permanent financing.',
-    features: ['7-30 day closings', 'Up to 80% LTV', 'Interest-only payments'],
-    color: 'bg-green-500',
-    link: '/bridge-loan'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Commercial Loans',
-    description: 'Comprehensive commercial real estate financing for all property types.',
-    features: ['Competitive rates', 'Long-term financing', 'Nationwide coverage'],
-    color: 'bg-purple-500',
-    link: '/commercial'
-  },
-  {
-    icon: Hammer,
-    title: 'Fix & Flip Construction',
-    description: 'Specialized financing for residential fix and flip projects.',
-    features: ['Draw-based funding', 'Fast approvals', 'Experienced contractors'],
-    color: 'bg-orange-500',
-    link: '/fix-flip-loans'
-  },
-  {
-    icon: Church,
-    title: 'Church Loans & Financing',
-    description: 'Specialized financing solutions for religious organizations and churches.',
-    features: ['Ministry-focused', 'Flexible repayment', 'Competitive church rates'],
-    color: 'bg-amber-500',
-    link: '/church-loan'
-  },
-  {
-    icon: Construction,
-    title: 'Ground Up Construction',
-    description: 'New construction financing for residential and commercial projects.',
-    features: ['Construction-to-perm', 'Progress inspections', 'Competitive rates'],
-    color: 'bg-red-500',
-    link: '/ground-up-construction'
-  },
-  {
-    icon: Banknote,
-    title: 'Hard Money Loans',
-    description: 'Asset-based lending with quick closings for time-sensitive deals.',
-    features: ['7-10 day closings', 'No income verification', 'Up to 70% LTV'],
-    color: 'bg-indigo-500',
-    link: '/hard-money'
-  },
-
-  {
-    icon: Ship,
-    title: 'Yacht Financing',
-    description: 'Specialized marine financing for luxury yachts and boats.',
-    features: ['Up to $50M financing', 'Competitive marine rates', 'Flexible terms'],
-    color: 'bg-cyan-500',
-    link: '/yatch-loan'
-  },
-  {
-    icon: Plane,
-    title: 'Aircraft Financing',
-    description: 'Aviation financing for private and commercial aircraft purchases.',
-    features: ['New & used aircraft', 'Competitive aviation rates', 'Quick approvals'],
-    color: 'bg-sky-500',
-    link: '/aircraft-financing'
-  }
-];
-
-const LoanTypes = () => {
-  return (
-    <section id="loan-types" className="py-24 bg-white" itemScope itemType="https://schema.org/Service">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
-          <h2 className="text-5xl md:text-6xl font-black text-slate-900 mb-8 tracking-tight" itemProp="name">
-            Choose Your{' '}
-            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Funding Path</span>
-          </h2>
-          <p className="text-2xl text-slate-600 max-w-4xl mx-auto font-medium leading-relaxed" itemProp="description">
-            <span className="text-slate-900 font-semibold">200+ specialized lenders</span> compete for your deal.{' '}
-            <span className="text-blue-600 font-semibold">AI-powered matching</span> finds your perfect fit in minutes, not months.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {loanTypes.map((loan, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white border border-slate-200 rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:border-blue-300 hover:-translate-y-2 relative overflow-hidden"
-              itemScope itemType="https://schema.org/FinancialProduct"
-            >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 group-hover:from-blue-50/50 group-hover:to-purple-50/30 transition-all duration-500 rounded-3xl" />
-              
-              <div className="relative z-10">
-              <motion.div
-                whileHover={{ scale: 1.15, rotate: 8 }}
-                className={`inline-flex items-center justify-center w-20 h-20 ${loan.color} rounded-3xl mb-8 shadow-lg group-hover:shadow-xl transition-all duration-300`}
-              >
-                <loan.icon className="text-white" size={36} />
-              </motion.div>
-              
-              <h3 className="text-2xl font-bold text-slate-900 mb-6 group-hover:text-blue-700 transition-colors" itemProp="name">
-                {loan.title}
-              </h3>
-              
-              <p className="text-slate-600 mb-8 leading-relaxed text-lg" itemProp="description">
-                {loan.description}
-              </p>
-
-              <ul className="space-y-3 mb-8">
-                {loan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center space-x-3 text-slate-700">
-                    <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"></div>
-                    <span className="font-medium">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => window.open(loan.link, '_blank')}
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://anchorcreloans.com/" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Anchor Commercial Capital" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US" />
+    <meta name="geo.placename" content="United States" />
+    
+    <!-- Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "Anchor Commercial Capital",
+      "description": "Commercial lending broker providing term sheets in 24 hours for bridge loans, commercial loans, construction loans, and specialty financing nationwide.",
+      "url": "https://anchorcreloans.com",
+      "telephone": "(555) 123-LOAN",
+      "email": "loans@anchorcreloans.com",
+      "areaServed": "United States",
+      "serviceType": [
+        "Commercial Loans",
+        "Bridge Loan Financing", 
+        "Construction Loans",
+        "Hard Money Loans",
+        "Private Money Loans",
+        "Fix & Flip Loans",
+        "Yacht Financing",
+        "Aircraft Financing",
+        "Church Loans"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Commercial Lending Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "FinancialProduct",
+              "name": "Commercial Loans",
+              "description": "Commercial real estate loans with term sheets delivered in 24 hours"
+            },
             "category": "Commercial Financing"
           },
-          "priceSpecification": {
-            "@type": "PriceSpecification",
-            "minPrice": "5.99",
-            "priceCurrency": "USD",
-            "unitText": "percent annual rate"
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "FinancialProduct",
+              "name": "Bridge Loans",
+              "description": "Bridge loan financing with fast 24-hour term sheet delivery"
+            },
+            "category": "Bridge Financing"
           }
-        }
-      ],
+        ]
+      },
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
@@ -163,67 +100,43 @@ const LoanTypes = () => {
     }
     </script>
     
-    <!-- BreadcrumbList Schema -->
+    <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://anchorcreloans.com"
+          "@type": "Question",
+          "name": "How fast can I get term sheets for my commercial loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Anchor Commercial Capital delivers competitive term sheets in 24 hours guaranteed. Our AI-powered platform matches you with qualified lenders and delivers multiple term sheet options within 24 hours."
+          }
         },
         {
-          "@type": "ListItem", 
-          "position": 2,
-          "name": "Commercial Loans",
-          "item": "https://anchorcreloans.com/commercial"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3, 
-          "name": "Bridge Loans",
-          "item": "https://anchorcreloans.com/bridge-loan"
+          "@type": "Question",
+          "name": "What types of commercial loans do you provide term sheets for?",
+          "acceptedAnswer": {
+            "@type": "Answer", 
+            "text": "We provide term sheets for all commercial loan types including bridge loans, commercial real estate loans, construction loans, hard money loans, fix & flip loans, yacht financing, aircraft financing, and church loans."
+          }
         }
       ]
     }
     </script>
-                className="mt-6 w-full bg-slate-100 text-slate-700 py-3 rounded-xl font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors"
-              >
-                Learn More
-              </motion.button>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Need a Custom Financing Solution?
-            </h3>
-            <p className="text-slate-600 mb-6">
-              Our experienced lending team can structure creative financing solutions 
-              for unique situations and specialized asset types.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
-            >
-              Speak with a Lending Specialist
-            </motion.button>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default LoanTypes;
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
