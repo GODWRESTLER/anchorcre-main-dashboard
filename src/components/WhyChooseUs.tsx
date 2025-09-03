@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap, Shield, Users, Award, Clock, DollarSign, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { Zap, Shield, Users, Award, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
 
 const advantages = [
   {

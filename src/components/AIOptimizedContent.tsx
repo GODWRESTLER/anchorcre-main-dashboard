@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { HelpCircle, CheckCircle, Info, Zap, TrendingUp, Shield, ArrowRight } from 'lucide-react';
+import { HelpCircle, CheckCircle, Info, Zap, TrendingUp, Shield } from 'lucide-react';
 
 const AIOptimizedContent = () => {
   const faqs = [

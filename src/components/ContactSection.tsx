@@ -21,38 +21,13 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Parse name into firstName and lastName
-    const nameParts = formData.name.trim().split(' ');
-    const firstName = nameParts[0] || '';
-    const lastName = nameParts.slice(1).join(' ') || '';
-    
-    // Format data for GoHighLevel webhook
-    const webhookData = {
-      contact: {
-        firstName,
-        lastName,
-        email: formData.email,
-        phone: formData.phone,
-        tags: ['Website Lead', 'Commercial Loan Inquiry']
-      },
-      customFields: {
-        loan_type: formData.loanType,
-        loan_amount: formData.loanAmount,
-        message: formData.message,
-        sms_opt_in: formData.smsOptIn,
-        source: 'Website Contact Form',
-        lead_score: 'Hot'
-      }
-    };
-    
     // Submit to GoHighLevel API
     fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/556795fc-6f88-40a5-966f-a12c800340a8', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(webhookData),
+      body: JSON.stringify(formData),
     })
       .then(response => {
         if (!response.ok) {
@@ -281,7 +256,7 @@ const ContactSection = () => {
                 Get Your Loan Quote in 60 Seconds
               </h3>
               <p className="text-slate-600 text-lg">
-                Fill out our form and get competitive term sheets from qualified lenders in 24 hours
+                Fill out our form and get matched with qualified lenders instantly
               </p>
             </div>
 

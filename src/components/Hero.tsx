@@ -49,7 +49,7 @@ const Hero = () => {
           >
             <span className="block">Commercial Loans</span>
             <span className="block bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Term Sheets in 24 Hours
+              Funded in 24 Hours
             </span>
           </motion.h1>
 
@@ -62,7 +62,7 @@ const Hero = () => {
             <p className="text-2xl md:text-3xl text-slate-200 mb-6 leading-relaxed max-w-5xl mx-auto font-medium">
               <span className="text-white font-bold">$100K to $100M+</span> commercial real estate financing with{' '}
               <span className="text-blue-300 font-bold">AI-powered lender matching</span>. 
-              Skip the banks. Get term sheets in 24 hours.
+              Skip the banks. Get funded fast.
             </p>
             
             <div className="flex flex-wrap items-center justify-center gap-4 text-lg">

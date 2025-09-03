@@ -1,11 +1,12 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Building2, 
+  Home, 
   Hammer, 
   Plane, 
   Ship, 
   Church, 
+  DollarSign, 
   TrendingUp,
   Construction,
   Banknote,
@@ -22,7 +23,7 @@ const loanTypes = [
     color: 'from-green-500 to-emerald-600',
     iconBg: 'bg-green-500',
     link: '/bridge-loan',
-    urgency: 'Term sheets in 24hrs'
+    urgency: 'Closes in 2-3 weeks'
   },
   {
     icon: TrendingUp,
@@ -97,13 +98,6 @@ const loanTypes = [
 ];
 
 const LoanTypes = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <section id="loan-types" className="py-32 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden" itemScope itemType="https://schema.org/Service">
       {/* Background Pattern */}
@@ -128,13 +122,13 @@ const LoanTypes = () => {
           <h2 className="text-5xl md:text-7xl font-black text-slate-900 mb-8 leading-tight" itemProp="name">
             <span className="block">Loan Programs That</span>
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Deliver Term Sheets
+              Actually Fund
             </span>
           </h2>
           
           <p className="text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium" itemProp="description">
             From <span className="font-bold text-slate-900">$100K fix & flips</span> to <span className="font-bold text-slate-900">$100M+ developments</span>, 
-            <span className="text-blue-600 font-semibold"> AI-powered matching</span> delivers competitive term sheets in 24 hours, not months.
+            our AI matches you with the right lender in 24 hours. No more endless applications or rejections.
           </p>
         </motion.div>
 
@@ -186,7 +180,7 @@ const LoanTypes = () => {
                 onClick={() => window.open(loan.link, '_blank')}
                 className="w-full bg-gradient-to-r from-slate-800 to-slate-900 text-white py-4 rounded-xl font-bold hover:from-slate-900 hover:to-black transition-all flex items-center justify-center space-x-2 group relative z-10"
               >
-                <span>Get Term Sheets</span>
+                <span>Get Quote Now</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>
@@ -205,11 +199,11 @@ const LoanTypes = () => {
             
             <div className="relative z-10">
               <h3 className="text-3xl md:text-4xl font-bold mb-6">
-                Need Custom Term Sheets for Complex Deals?
+                Need a Custom Financing Solution?
               </h3>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Our AI-powered platform can structure creative financing solutions for unique situations. 
-                Get matched with specialized lenders and receive term sheets in 24 hours.
+                Get matched with specialized lenders in 24 hours.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -219,13 +213,13 @@ const LoanTypes = () => {
                   whileTap={{ scale: 0.95 }}
                   className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-colors flex items-center space-x-2 shadow-xl"
                 >
-                  <span>Get Custom Term Sheets</span>
+                  <span>Get Custom Solution</span>
                   <ArrowRight size={20} />
                 </motion.button>
                 
                 <div className="flex items-center space-x-2 text-blue-200">
                   <Clock size={16} />
-                  <span className="text-sm font-medium">Term sheets delivered in 24 hours guaranteed</span>
+                  <span className="text-sm font-medium">Response in 24 hours guaranteed</span>
                 </div>
               </div>
             </div>

@@ -296,7 +296,7 @@ const CallToAction = () => {
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-6 rounded-xl font-bold hover:from-blue-600 hover:to-purple-700 transition-all flex items-center justify-center space-x-3 text-xl shadow-2xl group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
-                <span className="relative z-10">🚀 Get My Term Sheets Now</span>
+                <span className="relative z-10">🚀 Submit My Deal Now</span>
                 <ArrowRight size={24} className="relative z-10 group-hover:translate-x-1 transition-transform" />
               </motion.button>
 
