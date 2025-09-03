@@ -18,7 +18,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="relative z-10 bg-slate-900 px-6 py-4"
+      className="relative z-10 bg-slate-900 px-6 py-4 mt-16"
     >
       <div className="flex items-center justify-between">
         {/* Logo */}

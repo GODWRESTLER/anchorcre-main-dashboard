@@ -1,5 +1,6 @@
 import { HelmetProvider } from 'react-helmet-async';
 import { Routes, Route } from 'react-router-dom';
+import StickyBanner from './components/StickyBanner';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import LoanTypes from './components/LoanTypes';
@@ -25,7 +26,7 @@ function App() {
   return (
     <HelmetProvider>
       <div className="bg-slate-50 min-h-screen">
-        {/* Components that appear on every page */}
+        <StickyBanner />
 
 
         <Routes>
