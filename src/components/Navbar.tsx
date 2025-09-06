@@ -27,9 +27,9 @@ const Navbar = () => {
         {/* Navigation Menu */}
         <div className="hidden md:flex items-center space-x-8">
           <button onClick={() => scrollToSection('loan-types')} className="text-slate-300 hover:text-white transition-colors">Loan Programs</button>
-          <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors">About</button>
+          <a href="/about-us" className="text-slate-300 hover:text-white transition-colors">About Us</a>
           <button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-white transition-colors">Services</button>
-          <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors">Contact</button>
+          <a href="/contact-us" className="text-slate-300 hover:text-white transition-colors">Contact Us</a>
         </div>
 
         {/* CTA Button */}
@@ -62,9 +62,9 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-4">
             <button onClick={() => scrollToSection('loan-types')} className="text-slate-300 hover:text-white transition-colors text-left">Loan Programs</button>
-            <button onClick={() => scrollToSection('about')} className="text-slate-300 hover:text-white transition-colors text-left">About</button>
+            <a href="/about-us" className="text-slate-300 hover:text-white transition-colors text-left">About Us</a>
             <button onClick={() => scrollToSection('services')} className="text-slate-300 hover:text-white transition-colors text-left">Services</button>
-            <button onClick={() => scrollToSection('contact')} className="text-slate-300 hover:text-white transition-colors text-left">Contact</button>
+            <a href="/contact-us" className="text-slate-300 hover:text-white transition-colors text-left">Contact Us</a>
             <button onClick={() => scrollToSection('contact')} className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors text-left">
               Get Pre-Approved
             </button>

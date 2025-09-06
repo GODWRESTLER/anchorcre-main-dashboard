@@ -98,12 +98,19 @@ const Footer = () => {
               <ul className="space-y-3">
                 {links.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href="#"
-                      className="text-slate-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link}
-                    </a>
+                    {link === 'About Us' ? (
+                      <a href="/about-us" className="text-slate-400 hover:text-white transition-colors text-sm">
+                        {link}
+                      </a>
+                    ) : link === 'Contact' ? (
+                      <a href="/contact-us" className="text-slate-400 hover:text-white transition-colors text-sm">
+                        Contact Us
+                      </a>
+                    ) : (
+                      <a href="#" className="text-slate-400 hover:text-white transition-colors text-sm">
+                        {link}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

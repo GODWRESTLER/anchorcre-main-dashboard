@@ -75,6 +75,15 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
+            
+            <div className="text-center">
+              <a
+                href="/about-us"
+                className="inline-flex items-center space-x-2 bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors"
+              >
+                <span>Learn More About Us</span>
+              </a>
+            </div>
           </motion.div>
 
           {/* Right Stats */}

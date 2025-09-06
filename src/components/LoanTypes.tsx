@@ -139,7 +139,7 @@ const LoanTypes = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open(loan.link, '_blank')}
+                onClick={() => window.location.href = loan.link}
                 className="mt-6 w-full bg-slate-100 text-slate-700 py-3 rounded-xl font-semibold hover:bg-blue-50 hover:text-blue-700 transition-colors"
               >
                 Learn More
