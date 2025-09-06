@@ -326,8 +326,10 @@ console.log("Form submitted")
                   className="mt-1 w-5 h-5 text-blue-500 border-2 border-slate-300 rounded focus:ring-blue-500 flex-shrink-0"
                 />
                 <label htmlFor="smsOptInContact" className="text-slate-700 text-sm leading-relaxed cursor-pointer">
-                  I consent to receive SMS messages and robo calls from Anchor Commercial Capital 
-                  regarding my financing inquiry. Message and data rates may apply. Reply STOP to opt out.
+                  By checking this box you are agreeing to receive recurring messages from Anchor Commercial Capital 
+                  related to your request for information. Message frequency varies per user. Message and data rates may apply. 
+                  Carriers are not liable for delayed or undelivered messages. Text HELP for help and STOP to unsubscribe. 
+                  <a href="/privacy-policy" className="text-blue-500 hover:text-blue-600 ml-1">Privacy Policy</a>.
                 </label>
               </div>
 

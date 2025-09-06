@@ -20,6 +20,11 @@ import HardMoneyPage from "./pages/hardmoney/HardMoneyPage"
 import Footer from './components/Footer';
 import BridgeLoanPage from './pages/bridgeloan/BridgeLoanPage'; // Your bridge loan page
 import AirCraftFinancing from './pages/aircraft-financing/AirCraftFinancing'; // Your bridge loan page
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import ConsentForm from './pages/ConsentForm';
 
 
 function App() {
@@ -55,6 +60,13 @@ function App() {
           <Route path="/yatch-loan" element={<YatchLoan />} />
           <Route path="/ground-up-construction" element={<GroundUpConstruction />} />
           <Route path="/aircraft-financing" element={<AirCraftFinancing />} />
+
+          {/* Additional Pages */}
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/consent-form" element={<ConsentForm />} />
         </Routes>
 
         {/* Components that appear on every page */}
