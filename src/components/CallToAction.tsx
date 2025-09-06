@@ -272,6 +272,12 @@ const CallToAction = () => {
                 </label>
               </div>
 
+              <div className="text-xs text-slate-500 text-center mt-4">
+                <p>
+                  <strong>Keywords:</strong> Text LOAN or DEAL to opt-in • Text STOP to unsubscribe • Text HELP for assistance
+                </p>
+              </div>
+
               <motion.button
                 onClick={handleSubmit}
                 whileHover={{ scale: 1.05 }}

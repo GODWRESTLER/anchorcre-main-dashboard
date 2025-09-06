@@ -69,6 +69,25 @@ const TermsOfService = () => {
                     for delayed or undelivered messages.
                   </p>
                 </div>
+                
+                <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                  <p className="font-semibold mb-2">10DLC Registration Keywords:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li><strong>Opt-In:</strong> Text "LOAN" or "DEAL" to join Anchor Commercial Capital's updates</li>
+                    <li><strong>Opt-Out:</strong> Text "STOP" to unsubscribe from all messages</li>
+                    <li><strong>Help:</strong> Text "HELP" for assistance and contact information</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                  <p className="font-semibold mb-2">Keyword Response Examples:</p>
+                  <ul className="space-y-2 text-sm">
+                    <li><strong>LOAN/DEAL:</strong> "Welcome to Anchor Commercial Capital updates! Get loan info at anchorcreloans.com or call (555) 123-LOAN. Msg&data rates may apply. Text STOP to opt out."</li>
+                    <li><strong>STOP:</strong> "You've unsubscribed from Anchor Commercial Capital. Text LOAN to rejoin. Contact us at loans@anchorcreloans.com or (555) 123-LOAN."</li>
+                    <li><strong>HELP:</strong> "Contact Anchor Commercial Capital at loans@anchorcreloans.com or call (555) 123-LOAN. Text STOP to unsubscribe. Msg&data rates may apply."</li>
+                  </ul>
+                </div>
+                
                 <p>
                   By opting in to receive SMS messages, you agree to receive text messages 
                   from Anchor Commercial Capital regarding your loan inquiry and related services.

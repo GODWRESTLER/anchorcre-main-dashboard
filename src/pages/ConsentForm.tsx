@@ -215,6 +215,15 @@ const ConsentForm = () => {
               </div>
 
               <div className="bg-blue-50 rounded-xl p-4 text-sm text-slate-600">
+                <h4 className="font-semibold mb-2">10DLC Keyword Information:</h4>
+                <ul className="space-y-1 text-xs">
+                  <li>• Text <strong>LOAN</strong> or <strong>DEAL</strong> to opt-in to updates</li>
+                  <li>• Text <strong>STOP</strong> to unsubscribe from all messages</li>
+                  <li>• Text <strong>HELP</strong> for assistance and contact information</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 rounded-xl p-4 text-sm text-slate-600">
                 <p className="mb-2">
                   <strong>Note:</strong> These consent options are optional and not required to receive our services. 
                   You can change your preferences at any time by contacting us or using the opt-out methods provided.
