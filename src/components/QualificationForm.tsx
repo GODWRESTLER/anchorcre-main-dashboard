@@ -349,6 +349,12 @@ const QualificationForm = () => {
                   </label>
                 </div>
 
+                <div className="text-xs text-slate-500 text-center mt-4">
+                  <p>
+                    <strong>Keywords:</strong> Text LOAN or DEAL to opt-in • Text STOP to unsubscribe • Text HELP for assistance
+                  </p>
+                </div>
+
                 <div className="bg-blue-50 rounded-xl p-4 text-xs sm:text-sm text-slate-600">
                   <p className="mb-2">
                     <strong>TCPA Compliance Notice:</strong> By providing your contact information and clicking "Submit My Deal," 
