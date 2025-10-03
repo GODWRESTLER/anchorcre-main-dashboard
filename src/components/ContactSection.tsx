@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock, ArrowRight, CheckCircle } from 'lucide-react';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,6 +27,28 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Push conversion event to GTM dataLayer
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_type: 'contact_form',
+        form_name: 'Contact Form',
+        loan_type: formData.loanType,
+        loan_amount: formData.loanAmount,
+        user_email: formData.email,
+        user_phone: formData.phone
+      });
+
+      // Push Google Ads conversion event
+      window.dataLayer.push({
+        event: 'conversion',
+        conversion_type: 'contact_form',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+
     // Submit to GoHighLevel API
     fetch('https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/556795fc-6f88-40a5-966f-a12c800340a8', {
       method: 'POST',
@@ -39,29 +67,9 @@ const ContactSection = () => {
         setIsSubmitted(true);
       })
       .catch(error => {
-        setIsSubmitted(true); // Optionally show error UI
+        setIsSubmitted(true);
         console.error('Submission error:', error);
       });
-
-    // Google Ads Conversion Tracking
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-        'value': 1.0,
-        'currency': 'USD'
-      });
-    }
-
-    // Analytics Event
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
-        'event_category': 'Lead Generation',
-        'event_label': 'Qualification Form',
-        'value': formData.loanAmount
-      });
-    }
-console.log("Form submitted")
-
   };
 
   if (isSubmitted) {

@@ -7,23 +7,25 @@ declare global {
   }
 }
 
-// Track form submissions
+// Track form submissions via GTM dataLayer
 export const trackFormSubmission = (formType: string, formData: any) => {
-  // Google Analytics Event
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'form_submit', {
-      event_category: 'Lead Generation',
-      event_label: formType,
-      value: formData.loanAmount || 'unknown'
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'form_submission',
+      form_type: formType,
+      form_name: formType,
+      loan_amount: formData.loanAmount || 'unknown',
+      loan_type: formData.loanType || 'unknown'
     });
   }
 };
 
-// Track conversion for Google Ads
-export const trackConversion = (conversionLabel: string, value: number = 1.0) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion', {
-      send_to: `AW-CONVERSION_ID/${conversionLabel}`,
+// Track conversion for Google Ads via GTM dataLayer
+export const trackConversion = (conversionType: string, value: number = 1.0) => {
+  if (typeof window !== 'undefined' && window.dataLayer) {
+    window.dataLayer.push({
+      event: 'conversion',
+      conversion_type: conversionType,
       value: value,
       currency: 'USD'
     });

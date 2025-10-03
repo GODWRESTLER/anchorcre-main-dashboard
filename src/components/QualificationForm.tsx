@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calculator, ArrowRight, CheckCircle, Clock } from 'lucide-react';
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
 const QualificationForm = () => {
   const [formData, setFormData] = useState({
     loanType: '',
@@ -31,6 +37,28 @@ const QualificationForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Push conversion event to GTM dataLayer
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'form_submission',
+        form_type: 'qualification_form',
+        form_name: 'Qualification Form',
+        loan_type: formData.loanType,
+        loan_amount: formData.loanAmount,
+        property_type: formData.propertyType,
+        timeline: formData.timeline,
+        credit_score: formData.creditScore
+      });
+
+      // Push Google Ads conversion event
+      window.dataLayer.push({
+        event: 'conversion',
+        conversion_type: 'lead_form',
+        value: 1.0,
+        currency: 'USD'
+      });
+    }
+
     // Submit to GoHighLevel API
     fetch('api', {
       method: 'POST',
@@ -49,30 +77,9 @@ const QualificationForm = () => {
         setIsSubmitted(true);
       })
       .catch(error => {
-        setIsSubmitted(true); // Optionally show error UI
+        setIsSubmitted(true);
         console.error('Submission error:', error);
       });
-
-    // Google Ads Conversion Tracking
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
-        'value': 1.0,
-        'currency': 'USD'
-      });
-    }
-
-    // Analytics Event
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'form_submit', {
-        'event_category': 'Lead Generation',
-        'event_label': 'Qualification Form',
-        'value': formData.loanAmount
-      });
-    }
-    // Optionally: Remove this if you only want to show thank you on successful API submit
-    // setIsSubmitted(true);
-    // console.log('Form submitted:', formData);
   };
 
   if (isSubmitted) {
