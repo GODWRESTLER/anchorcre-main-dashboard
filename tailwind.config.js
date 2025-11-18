@@ -6,6 +6,10 @@ export default {
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
+      lineHeight: {
+        'body': '1.5',
+        'heading': '1.2',
+      },
     },
   },
   plugins: [],
