@@ -32,7 +32,7 @@ export default function HeroSection() {
             </button>
 
             <a
-              href="https://calendly.com/anchor-cre"
+              href="https://links.clouddrafted.com/widget/booking/Z4VlFfTa2n47oEBpBwko"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center justify-center gap-2"

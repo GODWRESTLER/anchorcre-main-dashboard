@@ -16,11 +16,11 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
             <div className="space-y-3">
               <a
-                href="tel:+19542895914"
+                href="tel:+15615123089"
                 className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                <span>(954) 289-5914</span>
+                <span>(561) 512-3089</span>
               </a>
               <a
                 href="mailto:loans@anchorcreloans.com"
