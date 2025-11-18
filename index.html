@@ -319,7 +319,13 @@
     </script>
     
     <!-- Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17529359845"></script>
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17529359845');
+
       function gtag_report_conversion(url) {
         var callback = function () {
           if (typeof(url) != 'undefined') {
@@ -327,7 +333,7 @@
           }
         };
         gtag('event', 'conversion', {
-          'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL',
+          'send_to': 'AW-17529359845/CONVERSION_LABEL',
           'event_callback': callback
         });
         return false;
