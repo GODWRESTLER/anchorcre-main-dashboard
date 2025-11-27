@@ -46,6 +46,9 @@ export default function LeadForm() {
       const webhookUrl = 'https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/556795fc-6f88-40a5-966f-a12c800340a8';
 
       const payload = {
+        name: formData.contact_name,
+        email: formData.contact_email,
+        phone: formData.contact_phone,
         loan_goal: formData.loan_goal,
         experience_level: formData.experience_level,
         purchase_price: formData.purchase_price,
@@ -55,12 +58,7 @@ export default function LeadForm() {
         timeline: formData.timeline,
         arv_optional: formData.arv_optional,
         portfolio_value: formData.portfolio_value,
-        contact_name: formData.contact_name,
-        contact_email: formData.contact_email,
-        contact_phone: formData.contact_phone,
-        agree_terms: formData.agree_terms,
-        form_type: 'bridge_loan_application',
-        submitted_at: new Date().toISOString()
+        agree_terms: formData.agree_terms ? 'yes' : 'no'
       };
 
       const response = await fetch(webhookUrl, {
