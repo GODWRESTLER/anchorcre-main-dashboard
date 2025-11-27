@@ -12,6 +12,7 @@ interface FormData {
   arv_optional: string;
   portfolio_value: string;
   contact_name: string;
+  contact_email: string;
   contact_phone: string;
   agree_terms: boolean;
 }
@@ -31,6 +32,7 @@ export default function LeadForm() {
     arv_optional: '',
     portfolio_value: '',
     contact_name: '',
+    contact_email: '',
     contact_phone: '',
     agree_terms: false,
   });
@@ -54,6 +56,7 @@ export default function LeadForm() {
         arv_optional: formData.arv_optional,
         portfolio_value: formData.portfolio_value,
         contact_name: formData.contact_name,
+        contact_email: formData.contact_email,
         contact_phone: formData.contact_phone,
         agree_terms: formData.agree_terms,
         form_type: 'bridge_loan_application',
@@ -84,6 +87,7 @@ export default function LeadForm() {
             arv_optional: '',
             portfolio_value: '',
             contact_name: '',
+            contact_email: '',
             contact_phone: '',
             agree_terms: false,
           });
@@ -134,7 +138,7 @@ export default function LeadForm() {
       case 3:
         return formData.property_state && formData.timeline;
       case 4:
-        return formData.contact_name && formData.contact_phone && formData.agree_terms;
+        return formData.contact_name && formData.contact_email && formData.contact_phone && formData.agree_terms;
       default:
         return false;
     }
@@ -383,6 +387,22 @@ export default function LeadForm() {
                         name="contact_name"
                         required
                         value={formData.contact_name}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="contact_email" className="block text-sm font-semibold text-gray-700 mb-2">
+                        Email address *
+                      </label>
+                      <input
+                        type="email"
+                        id="contact_email"
+                        name="contact_email"
+                        required
+                        placeholder="your@email.com"
+                        value={formData.contact_email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
