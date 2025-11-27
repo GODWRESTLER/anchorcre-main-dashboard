@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Send, CheckCircle, ChevronRight, ChevronLeft, Calendar } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Send, CheckCircle, ChevronRight, ChevronLeft } from 'lucide-react';
 
 interface FormData {
   loan_goal: string;
@@ -38,6 +38,20 @@ export default function LeadForm() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    if (submitted) {
+      const script = document.createElement('script');
+      script.src = 'https://links.clouddrafted.com/js/form_embed.js';
+      script.type = 'text/javascript';
+      script.async = true;
+      document.body.appendChild(script);
+
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [submitted]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -194,15 +208,15 @@ export default function LeadForm() {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="font-semibold text-blue-900 mb-3">Want to speak with us sooner?</h3>
                 <p className="text-blue-700 mb-4">Book a consultation call to discuss your deal in detail.</p>
-                <a
-                  href="https://calendly.com/your-calendar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105"
-                >
-                  <Calendar className="w-5 h-5" />
-                  Schedule a Call
-                </a>
+                <div className="mt-4">
+                  <iframe
+                    src="https://links.clouddrafted.com/widget/booking/Z4VlFfTa2n47oEBpBwko"
+                    style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
+                    scrolling="no"
+                    id="Z4VlFfTa2n47oEBpBwko_1764263996297"
+                    title="Book a consultation"
+                  />
+                </div>
               </div>
             </div>
           ) : (
