@@ -49,6 +49,32 @@ export default function LeadForm() {
         name: formData.contact_name,
         email: formData.contact_email,
         phone: formData.contact_phone,
+        dndSettings: {
+          Call: {
+            status: 'inactive',
+            message: 'string'
+          },
+          Email: {
+            status: 'inactive',
+            message: 'string'
+          },
+          SMS: {
+            status: 'inactive',
+            message: 'string'
+          },
+          WhatsApp: {
+            status: 'inactive',
+            message: 'string'
+          },
+          GMB: {
+            status: 'inactive',
+            message: 'string'
+          },
+          FB: {
+            status: 'inactive',
+            message: 'string'
+          }
+        },
         loan_goal: formData.loan_goal,
         experience_level: formData.experience_level,
         purchase_price: formData.purchase_price,
