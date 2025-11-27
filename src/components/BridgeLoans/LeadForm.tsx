@@ -39,9 +39,64 @@ export default function LeadForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
+
+    try {
+      const webhookUrl = 'https://services.leadconnectorhq.com/hooks/MXM63RC3IDd9isf1anbN/webhook-trigger/556795fc-6f88-40a5-966f-a12c800340a8';
+
+      const payload = {
+        loan_goal: formData.loan_goal,
+        experience_level: formData.experience_level,
+        purchase_price: formData.purchase_price,
+        cash_ready: formData.cash_ready,
+        credit_score: formData.credit_score,
+        property_state: formData.property_state,
+        timeline: formData.timeline,
+        arv_optional: formData.arv_optional,
+        portfolio_value: formData.portfolio_value,
+        contact_name: formData.contact_name,
+        contact_phone: formData.contact_phone,
+        agree_terms: formData.agree_terms,
+        form_type: 'bridge_loan_application',
+        submitted_at: new Date().toISOString()
+      };
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        console.log('Form submitted successfully:', formData);
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            loan_goal: '',
+            experience_level: '',
+            purchase_price: '',
+            cash_ready: '',
+            credit_score: '',
+            property_state: '',
+            timeline: '',
+            arv_optional: '',
+            portfolio_value: '',
+            contact_name: '',
+            contact_phone: '',
+            agree_terms: false,
+          });
+          setCurrentStep(1);
+        }, 5000);
+      } else {
+        console.error('Form submission failed:', response.statusText);
+        alert('There was an error submitting your form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again.');
+    }
   };
 
   const handleChange = (
