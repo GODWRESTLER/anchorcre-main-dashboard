@@ -16,7 +16,7 @@ export default function BridgeLoansPage() {
         <title>Commercial & Investor Bridge Loans — Close in 7-10 Days | Anchor CRE</title>
         <meta
           name="description"
-          content="Commercial bridge loans & real estate bridge financing for investors. Up to 75-80% LTV. Short-term 6-24 month terms. Nationwide direct lender. Get term sheet in 24 hours."
+          content="Commercial bridge loans & real estate bridge financing for investors. Up to 75-80% LTV. Short-term 6-24 month terms. Providing commercial financing solutions nationwide. Get term sheet in 24 hours."
         />
         <meta
           name="keywords"

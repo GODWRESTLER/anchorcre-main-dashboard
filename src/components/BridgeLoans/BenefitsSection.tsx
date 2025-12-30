@@ -14,8 +14,8 @@ export default function BenefitsSection() {
     },
     {
       icon: Shield,
-      title: 'Direct Lender',
-      description: 'We fund our own deals - no broker delays or third-party complications',
+      title: 'Streamlined Process',
+      description: 'Efficient financing solutions with no broker delays or third-party complications',
     },
     {
       icon: Clock,

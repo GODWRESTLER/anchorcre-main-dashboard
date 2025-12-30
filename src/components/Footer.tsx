@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Anchor CRE Loans</h3>
             <p className="text-gray-400 leading-relaxed">
-              Direct commercial lender specializing in bridge loans, commercial financing, and investor real estate loans nationwide.
+              Providing commercial financing solutions specializing in bridge loans, commercial financing, and investor real estate loans nationwide.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
 
         <div className="mt-6 text-xs text-gray-500 leading-relaxed">
           <p>
-            Anchor Commercial Capital is a direct commercial lender. Loan terms, rates, and availability subject to credit approval and may vary by state, property type, and borrower qualifications. This is not a commitment to lend. All information provided is for informational purposes only and does not constitute a loan application or offer of credit.
+            Anchor Commercial Capital provides commercial financing solutions. Loan terms, rates, and availability subject to credit approval and may vary by state, property type, and borrower qualifications. This is not a commitment to lend. All information provided is for informational purposes only and does not constitute a loan application or offer of credit.
           </p>
         </div>
       </div>

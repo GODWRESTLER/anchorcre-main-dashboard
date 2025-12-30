@@ -23,10 +23,10 @@ export default function EligibilitySection() {
             </div>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Nationwide Direct Lender
+            Nationwide Commercial Financing
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We fund commercial bridge loans across all 50 states where permitted. As a direct lender, we control the entire process from application to funding.
+            We provide commercial bridge loans across all 50 states where permitted. Providing commercial financing solutions with a streamlined process from application to funding.
           </p>
         </div>
 
