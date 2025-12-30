@@ -58,7 +58,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-gray-400 text-sm">
               <Shield className="w-4 h-4" />
-              <span>Licensed Nationwide Lender</span>
+              <span>Commercial Financing Solutions</span>
             </div>
           </div>
         </div>
